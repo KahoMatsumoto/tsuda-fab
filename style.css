@@ -1,0 +1,50 @@
+@charset "UTF-8";
+body {
+	background-image: url(img/Shelves1.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+header {
+	background-color: #173840;
+	color: #FFFFFF;
+}
+header a {
+	color: #FFFFFF;
+}
+nav ul li {
+	display: inline-block;
+}
+#laser {
+	background-image:url(img/Bahamas.jpg);
+}
+#3d {
+	background-image:url(img/Bahamas.jpg);
+}
+
+
+
+.bgimage {
+  width: 100%;
+  min-height: 800px;
+  color: #fff;
+  display: table;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+.bgImage > * {
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .bgImage {    
+    background-attachment: fixed; 
+  }
+}
