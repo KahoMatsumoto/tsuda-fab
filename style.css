@@ -1,30 +1,72 @@
 @charset "UTF-8";
-body {
-	background-image: url(img/Shelves1.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+}
+.subtitle {
+	font-size: 40px;
+}
+.tagline {
+	font-size: 20px;
+}
+
+/* ヘッダーの固定 */
+div#header-fixed
+{
+    position: fixed;            /* ヘッダーの固定 */
+    top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+    width: 100%;                /* 横幅100%　*/
+    height: 140px;              /* 縦幅140px */
+}
+div#header-bk {
+	background-image: url(./img/panolama.jpg);
+	background-color: #173840;     /* 背景色 */
+	padding:10px 0 20px;       /* 上10px、下20pxをあける */
+	/* height:289px;              /* 縦の高さ110px */ */
+	width:100%;                /* 横の幅を100% */
 	background-size: cover;
 }
-header {
-	background-color: #173840;
-	color: #FFFFFF;
+div#header {
+
+	border: 5px solid #fff;    /* 表示領域を白枠で囲う */
+	height: 100%;              /* 縦の表示領域はheader-bkと同じ */
+	width: 960px;              /* 横の幅970px */
+	margin: auto;              /* 中央揃え */
 }
-header a {
-	color: #FFFFFF;
+div#header a {
+	color: #000000;
 }
+
 nav ul li {
 	display: inline-block;
 }
+#about {
+	background-image:url(./img/about.jpg);
+}
 #laser {
-	background-image:url(img/Bahamas.jpg);
+	background-image:url(./img/laser1.jpg);
 }
-#3d {
-	background-image:url(img/Bahamas.jpg);
+#three-d {
+	background-image:url(./img/3d.jpg);
 }
 
+#gallery-top, #gallery-btm {
+	background-image:url(./img/grly.jpg);
+}
+#gallery-con {
+	background-image: url(./img/bg/FotoJet.png);
+	background-size: 50%;
+	background-position: bottom;
+}
+#access {
+	background-image: url(./img/access.jpg);
+}
 
-
-.bgimage {
+.bgImage {
   width: 100%;
   min-height: 800px;
   color: #fff;
@@ -34,7 +76,13 @@ nav ul li {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
+	margin: auto;
+
+	text-shadow: 1px 1px 0 #000,
+             -1px 1px 0 #000,
+             1px -1px 0 #000,
+             -1px -1px 0 #000;
 }
 .bgImage > * {
     display:table-cell;
@@ -43,8 +91,41 @@ nav ul li {
     margin: 0;
     padding: 0;
 }
+
+div#gallery-top.bgImage ,
+div#gallery-btm.bgImage{
+	min-height: initial;
+	height: 300px;
+}
+div#gallery-top > * {
+	vertical-align: bottom;
+}
+div#gallery-btm > *{
+	vertical-align: top;
+}
+
+div#gallery-con.bgImage {
+	min-height: initial;
+	height: 150px;
+	box-sizing:border-box;
+	border: 5px solid #000;
+}
+div#gallery-con > h1{
+	color: #000000;
+	text-shadow: 2px 2px 0 #fff,
+             -2px 2px 0 #fff,
+             2px -2px 0 #fff,
+             -2px -2px 0 #fff;
+	vertical-align: top;
+}
 @media screen and (min-width: 768px) {
-  .bgImage {    
-    background-attachment: fixed; 
+  .bgImage {
+    background-attachment: fixed;
   }
+
+footer {
+	text-align: center;
+}
+#about > *{
+	vertical-align: bottom;
 }
